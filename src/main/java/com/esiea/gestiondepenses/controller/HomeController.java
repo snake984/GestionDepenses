@@ -1,4 +1,4 @@
-package com.esiea.gestiondepenses;
+package com.esiea.gestiondepenses.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
