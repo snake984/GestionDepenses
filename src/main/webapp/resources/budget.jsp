@@ -30,12 +30,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/gestiondepenses/">GestionDepenses</a>
+          <a class="brand" href="/gestiondepenses/resources/home.jsp">GestionDepenses</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="/gestiondepenses/">Accueil</a></li>
-              <li><a href="account">Mon Compte</a></li>
-              <li class="active"><a href="budget">Prévision de budget</a></li>
+              <li><a href="/gestiondepenses/resources/home.jsp">Accueil</a></li>
+              <li><a href="accountHolder.jsp">Utilisateurs</a></li>
+              <li class="active"><a href="budget.jsp">Prévision de budget</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

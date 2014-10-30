@@ -27,12 +27,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/gestiondepenses/">GestionDepenses</a>
+          <a class="brand" href="/gestiondepenses/resources/home.jsp">GestionDepenses</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="/gestiondepenses/">Accueil</a></li>
-              <li><a href="account">Mon Compte</a></li>
-              <li><a href="budget">Prévision de budget</a></li>
+              <li class="active"><a href="/gestiondepenses/resources/home.jsp">Accueil</a></li>
+              <li><a href="accountHolder.jsp">Utilisateurs</a></li>
+              <li><a href="budget.jsp">Prévision de budget</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -42,7 +42,7 @@
 <div class="container">
 
 	<h1>
-		Hello world!  
+		Wesh Reda , bien ou bien ?  
 	</h1>
 
 	<P>  The time on the server is ${serverTime}. </P>
