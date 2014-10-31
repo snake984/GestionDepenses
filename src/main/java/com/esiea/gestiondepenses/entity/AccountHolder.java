@@ -1,6 +1,6 @@
 package com.esiea.gestiondepenses.entity;
 
-public class Account {
+public class AccountHolder {
 	
 	int totalAmount,
 		income,
@@ -9,17 +9,17 @@ public class Account {
 		currentMonthExpenses,
 		nextMonthExpenses;
 
-	public Account(int totalAmount) {
+	public AccountHolder(int totalAmount) {
 		this.totalAmount=totalAmount;
 	}
 	
-	public Account(Account account) {
-		this.currentMonthExpenses=account.currentMonthExpenses;
-		this.income=account.income;
-		this.lastMonthExpenses=account.lastMonthExpenses;
-		this.monthlyExpenses=account.monthlyExpenses;
-		this.nextMonthExpenses=account.nextMonthExpenses;
-		this.totalAmount=account.totalAmount;
+	public AccountHolder(AccountHolder accountHolder) {
+		this.currentMonthExpenses=accountHolder.currentMonthExpenses;
+		this.income=accountHolder.income;
+		this.lastMonthExpenses=accountHolder.lastMonthExpenses;
+		this.monthlyExpenses=accountHolder.monthlyExpenses;
+		this.nextMonthExpenses=accountHolder.nextMonthExpenses;
+		this.totalAmount=accountHolder.totalAmount;
 	}
 	
 	public int getIncome() {
