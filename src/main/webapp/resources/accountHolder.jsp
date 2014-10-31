@@ -17,10 +17,11 @@
   padding-top: 50px;
   }
 	</style>
+	<title>Contact Manager</title>
 </head>
 
 <body>
-
+    
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -29,12 +30,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/gestiondepenses/">GestionDepenses</a>
+          <a class="brand" href="/gestiondepenses/resources/home.jsp">GestionDepenses</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="/gestiondepenses/">Accueil</a></li>
-              <li class="active"><a href="account">Mon Compte</a></li>
-              <li><a href="budget">Prévision de budget</a></li>
+              <li><a href="/gestiondepenses/resources/home.jsp">Accueil</a></li>
+              <li class="active"><a href="accountHolder.jsp">Utilisateurs</a></li>
+              <li><a href="budget.jsp">Prévision de budget</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -42,7 +43,11 @@
     </div>
 
 	<div class="container">
-		<p>Bienvenue dans mon compte</p>
+	
+		<!-- <p>Liste des utilisateurs : </p> -->
+		<!-- account userName : account.getName() -->
+		
+	 <a href="/createAccountHolder">Créer un compte utilisateur</a> 
 	</div>
 	
 	    <!-- Le javascript
