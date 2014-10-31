@@ -9,8 +9,6 @@
 		<param-value>
 		    
 		    /WEB-INF/spring/dao-context.xml
-		    /WEB-INF/spring/service-context.xml
-		    /WEB-INF/spring/root-context.xml
 		</param-value>
 	</context-param>
 	
