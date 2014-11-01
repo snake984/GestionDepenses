@@ -34,7 +34,7 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="/gestiondepenses/resources/home.jsp">Accueil</a></li>
-              <li class="active"><a href="accountHolder.jsp">Utilisateurs</a></li>
+              <li class="active"><a href="accountHolder">Utilisateurs</a></li>
               <li><a href="budget.jsp">Prévision de budget</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -47,7 +47,7 @@
 		<!-- <p>Liste des utilisateurs : </p> -->
 		<!-- account userName : account.getName() -->
 		
-	 <a href="/createAccountHolder">Créer un compte utilisateur</a> 
+	 <a href="/gestiondepenses/resources/createAccountHolder.jsp">Créer un compte utilisateur</a> 
 	</div>
 	
 	    <!-- Le javascript

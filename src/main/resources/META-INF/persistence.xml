@@ -1,0 +1,22 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+version="2.0">
+
+<!-- nom de l'unité de persistence = permet de créer un context de persistence qui 
+permet lui de definir les objets qu'hibernate gérera puis transformera en requete SQL. -->    
+<persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
+<description>
+Persistence unit for budget handling application
+</description>
+<provider>org.hibernate.ejb.HibernatePersistence</provider>
+ 
+<properties>
+<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+<property name="hibernate.show_sql" value="true" />
+<property name="hibernate.hbm2ddl.auto" value="update" /> 
+</properties>
+ 
+</persistence-unit>
+ 
+</persistence>
