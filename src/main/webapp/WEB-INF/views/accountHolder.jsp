@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Prévision de budget</title>
+<title>Mon compte</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Home Page">
     <meta name="author" content="snake984">
@@ -17,11 +17,11 @@
   padding-top: 50px;
   }
 	</style>
-	
+	<title>Contact Manager</title>
 </head>
 
 <body>
-
+    
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -30,12 +30,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/gestiondepenses/resources/home.jsp">GestionDepenses</a>
+          <a class="brand" href="/">GestionDepenses</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
+<!-- src/main/webapp/resources/accountHolder.jsp
               <li><a href="/gestiondepenses/resources/home.jsp">Accueil</a></li>
-              <li><a href="accountHolder.jsp">Utilisateurs</a></li>
-              <li class="active"><a href="budget.jsp">Prévision de budget</a></li>
+              <li class="active"><a href="accountHolder">Utilisateurs</a></li>
+              <li><a href="budget.jsp">Prévision de budget</a></li> -->
+
+              <li><a href="/">Accueil</a></li>
+              <li class="active"><a href="/account">Utilisateurs</a></li>
+              <li><a href="/budget">Prévision de budget</a></li>
+
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -43,7 +49,11 @@
     </div>
 
 	<div class="container">
-		<p>Bienvenue dans prévision de budget</p>
+	
+		<!-- <p>Liste des utilisateurs : </p> -->
+		<!-- account userName : account.getName() -->
+		
+	 <a href="/gestiondepenses/resources/createAccountHolder.jsp">Créer un compte utilisateur</a> 
 	</div>
 	
 	    <!-- Le javascript

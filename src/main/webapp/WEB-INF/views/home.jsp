@@ -27,12 +27,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/gestiondepenses/resources/home.jsp">GestionDepenses</a>
+          <a class="brand" href="/">GestionDepenses</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="/gestiondepenses/resources/home.jsp">Accueil</a></li>
-              <li><a href="accountHolder.jsp">Utilisateurs</a></li>
-              <li><a href="budget.jsp">Prévision de budget</a></li>
+              <li class="active"><a href="/">Accueil</a></li>
+              <li><a href="/account">Utilisateurs</a></li>
+              <li><a href="/budget">Prévision de budget</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
