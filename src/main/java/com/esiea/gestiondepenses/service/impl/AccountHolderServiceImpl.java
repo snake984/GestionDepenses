@@ -21,6 +21,7 @@ public class AccountHolderServiceImpl implements IAccountHolderService {
 		return null;
 	}
 	
+	//Le set permet d'affecter ahd crée par Spring au préalable à la variable de classe accountHolderDao.
 	public void setAccountHolderDao(IAccountHolderDAO ahd) {
 		this.accountHolderDao = ahd;
 	}

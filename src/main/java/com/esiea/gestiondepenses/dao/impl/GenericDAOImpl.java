@@ -1,48 +1,48 @@
 package com.esiea.gestiondepenses.dao.impl;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import com.esiea.gestiondepenses.dao.IGenericDAO;
 
-public class GenericDAOImpl<T> implements IGenericDAO<T> {
+public abstract class GenericDAOImpl<T> implements IGenericDAO<T> {
 	
 	//PersistenceContext permet de dire à Spring k'il faut injecter un Entity Manager.
 	@PersistenceContext
 	protected EntityManager entityManager;
 	
+	// permet de récupérer les informations sur la classe de l'entité représenté par T (par exemple : AccountHolder)
+	private Class<T> entityClass;
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public GenericDAOImpl() {
+		ParameterizedType pt = (ParameterizedType) getClass().getGenericSuperclass();
+        entityClass = (Class) pt.getActualTypeArguments()[0];
+    }
 	
 	@Override
 	public T create(T entity) {
-	
-		
-		return null;
+		entityManager.persist(entity);
+		return entity;
 	}
 
 	@Override
 	public T find(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (T) this.entityManager.find(entityClass, id);
 	}
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		entityManager.remove(entityManager.getReference(entityClass, id));
 		
 	}
 
 	@Override
 	public T update(T entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.merge(entity);
 	}
-	
-	//Le set permet d'affecter em crée par Spring au préalable à la variable de classe entityManager.
-	public void setEntityManager(EntityManager em) {
-		this.entityManager = em;
-	}
-	
-	
-	
 
 }

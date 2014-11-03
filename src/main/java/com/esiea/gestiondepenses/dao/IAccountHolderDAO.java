@@ -2,8 +2,8 @@ package com.esiea.gestiondepenses.dao;
 
 import com.esiea.gestiondepenses.entity.AccountHolder;
 
-public interface IAccountHolderDAO {
+public interface IAccountHolderDAO extends IGenericDAO<AccountHolder> {
 	
-	public void createAccountHolderModel(AccountHolder accountHolder);
+	public AccountHolder createAccountHolderModel(AccountHolder accountHolder);
 
 }

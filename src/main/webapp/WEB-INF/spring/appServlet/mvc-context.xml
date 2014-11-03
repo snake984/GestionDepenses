@@ -21,6 +21,10 @@
 	    class="com.esiea.gestiondepenses.controller.AccountHolderController">
 	    <beans:property name="accountHolderService" ref="accountHolderService"/>
 	</beans:bean>
+	
+	<beans:bean id="mainController" 
+	    class="com.esiea.gestiondepenses.controller.MainController">
+	</beans:bean>
 
 		
 	<!-- Enables the Spring MVC @Controller programming model -->
