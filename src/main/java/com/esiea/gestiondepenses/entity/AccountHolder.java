@@ -1,12 +1,20 @@
 package com.esiea.gestiondepenses.entity;
 
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
+
 
 
 /**
@@ -22,9 +30,11 @@ public class AccountHolder {
 	@Column(name="ACCOUNT_HOLDER_ID", nullable = false)
     private int accountHolderId;
 	
+	@NotEmpty(message="(*) Mandatory field")
 	@Column(name="ACCOUNT_HOLDER_USERNAME", nullable = false)
 	private String accountHolderUsername;
 	
+	@NotEmpty
 	@Column(name="ACCOUNT_HOLDER_LASTNAME", nullable = false)
 	private String accountHolderLastname;
 	
@@ -37,6 +47,17 @@ public class AccountHolder {
 	@Column(name="ACCOUNT_HOLDER_ZIPCODE")
 	private int accountHolderZipCode;
 	
+	@OneToMany(mappedBy=("accountHolder")) // mappedBy = nom de la foreignkey dans la table Account.
+	private List<Account> accountList;
+	
+	public List<Account> getAccountList() {
+		return accountList;
+	}
+
+	public void setAccountList(List<Account> accountList) {
+		this.accountList = accountList;
+	}
+
 	public int getAccountHolderId() {
 		return accountHolderId;
 	}

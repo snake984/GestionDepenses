@@ -11,12 +11,16 @@
 						http://www.springframework.org/schema/context
 						http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- Importer bean se trouvant dans service-context.xml -->
+	<beans:import resource="../service-context.xml"/>
+	
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
-	
-	<!-- <context:component-scan base-package="com.esiea.gestiondepenses.controller" />  -->
 
-	<context:component-scan base-package="com.esiea.gestiondepenses.controller" />
+	<beans:bean id="accountHolderController" 
+	    class="com.esiea.gestiondepenses.controller.AccountHolderController">
+	    <beans:property name="accountHolderService" ref="accountHolderService"/>
+	</beans:bean>
 
 		
 	<!-- Enables the Spring MVC @Controller programming model -->
@@ -30,6 +34,6 @@
 	</beans:bean>
 	
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
-	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<mvc:resources mapping="/resources/**" location="/WEB-INF/views/**" />
 	
 </beans:beans>

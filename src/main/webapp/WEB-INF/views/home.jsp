@@ -31,8 +31,8 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="/">Accueil</a></li>
-              <li><a href="/account">Utilisateurs</a></li>
-              <li><a href="/budget">Prévision de budget</a></li>
+              <li><a href="/gestiondepenses/accountHolder">Utilisateurs</a></li>
+              <li><a href="/gestiondepenses/budget">Prévision de budget</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -44,7 +44,6 @@
 	<h1>
 		Wesh Reda , bien ou bien ?  
 	</h1>
-
 	<P>  The time on the server is ${serverTime}. </P>
 </div>
 

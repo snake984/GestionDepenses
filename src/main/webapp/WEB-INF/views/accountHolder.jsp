@@ -53,7 +53,7 @@
 		<!-- <p>Liste des utilisateurs : </p> -->
 		<!-- account userName : account.getName() -->
 		
-	 <a href="/gestiondepenses/resources/createAccountHolder.jsp">Créer un compte utilisateur</a> 
+	 <a href="/gestiondepenses/createAccountHolder">Créer un compte utilisateur</a> 
 	</div>
 	
 	    <!-- Le javascript

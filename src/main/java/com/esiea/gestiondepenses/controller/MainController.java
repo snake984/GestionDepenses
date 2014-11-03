@@ -34,18 +34,4 @@ public class MainController {
 		
 		return "home";
 	}
-	
-	@RequestMapping(value = "/account", method = RequestMethod.GET)
-	public String account(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		return "accountHolder";
-	}
-
-	@RequestMapping(value = "/budget", method = RequestMethod.GET)
-	public String budget(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		return "budget";
-	}
 }

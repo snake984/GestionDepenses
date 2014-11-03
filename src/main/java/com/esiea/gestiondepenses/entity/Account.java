@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -29,6 +31,18 @@ public class Account {
 	@Column(name="ACC_CREATION_DATE", nullable = false)
 	private Date accountCreationDate;
 	
+	@ManyToOne
+	@JoinColumn(name="ACCOUNT_HOLDER_ID")
+	private AccountHolder accountHolder;
+	
+	public AccountHolder getAccountHolder() {
+		return accountHolder;
+	}
+
+	public void setAccountHolder(AccountHolder accountHolder) {
+		this.accountHolder = accountHolder;
+	}
+
 	public int getAccountId() {
 		return accountId;
 	}
