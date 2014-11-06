@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 
 import com.esiea.gestiondepenses.dao.IGenericDAO;
 
-public abstract class GenericDAOImpl<T> implements IGenericDAO<T> {
+public class GenericDAOImpl<T> implements IGenericDAO<T> {
 	
 	//PersistenceContext permet de dire à Spring k'il faut injecter un Entity Manager.
 	@PersistenceContext

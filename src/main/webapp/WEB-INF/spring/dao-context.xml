@@ -4,7 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="accountHolderDao" class="com.esiea.gestiondepenses.dao.impl.AccountHolderDAOImpl" parent="genericDao"/>
+    <import resource="root-context.xml"/>
     
     <bean id="genericDao" class="com.esiea.gestiondepenses.dao.impl.GenericDAOImpl" abstract="true" />
+    
+    <bean id="accountHolderDao" class="com.esiea.gestiondepenses.dao.impl.AccountHolderDAOImpl" parent="genericDao"/>
+    
 </beans>

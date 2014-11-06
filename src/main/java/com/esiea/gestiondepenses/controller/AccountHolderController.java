@@ -31,13 +31,13 @@ public class AccountHolderController {
 	public ModelAndView createAccountHolder(@ModelAttribute("accountHolderModel") @Valid AccountHolder accountHolder, 
 			BindingResult result) {
 		//System.out.println("Adress :" + accountHolder.getAccountHolderAdress());
-		// "accountCreated" = La vue , "accountHolderModel2" = , accountHolder = L'objet.
 		//BindingResult contient les erreurs, on lui donne au préalable @Valid.
 		
 		if (result.hasErrors()) {
 			      return new ModelAndView("createAccountHolder");
 		} else {
 			accountHolderService.createAccountHolder(accountHolder);
+			// "accountCreated" = La vue , "accountHolderModel2" = , accountHolder = L'objet.
 			return new ModelAndView("accountCreated", "accountHolderModel2", accountHolder);
 		}
 		
