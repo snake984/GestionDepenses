@@ -22,6 +22,12 @@
 	    <beans:property name="accountHolderService" ref="accountHolderService"/>
 	</beans:bean>
 	
+	<beans:bean id="accountController" 
+	    class="com.esiea.gestiondepenses.controller.AccountController">
+	    <beans:property name="accountHolderService" ref="accountHolderService"/>
+	    <beans:property name="accountService" ref="accountService"/>
+	</beans:bean>
+	
 	<beans:bean id="mainController" 
 	    class="com.esiea.gestiondepenses.controller.MainController">
 	</beans:bean>
@@ -32,12 +38,13 @@
 
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	 
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
-	<mvc:resources mapping="/resources/**" location="/WEB-INF/views/**" />
+	<mvc:resources mapping="/resources/**" location="/resources/**" />
 	
 </beans:beans>

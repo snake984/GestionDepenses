@@ -1,5 +1,7 @@
 package com.esiea.gestiondepenses.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -11,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.esiea.gestiondepenses.entity.AccountHolder;
 import com.esiea.gestiondepenses.service.IAccountHolderService;
-import com.esiea.gestiondepenses.service.impl.AccountHolderServiceImpl;
 	
 
 @Controller
@@ -38,16 +39,17 @@ public class AccountHolderController {
 		} else {
 			accountHolderService.createAccountHolder(accountHolder);
 			// "accountCreated" = La vue , "accountHolderModel2" = , accountHolder = L'objet.
-			return new ModelAndView("accountCreated", "accountHolderModel2", accountHolder);
+			return new ModelAndView("accountHolderCreated", "accountHolderModel", accountHolder);
 		}
 		
 	}
 	
 	//Récupération de tous les comptes.
-	@RequestMapping(method = RequestMethod.GET)
-	public String getAllAccountHolder() {
-		return null;
-		// GET ALL ACCOUNT HOLDER
+	@RequestMapping(value = "/accountHolders", 
+	method=RequestMethod.GET)
+	public ModelAndView getAllAccountHolder() {
+		List<AccountHolder> accountHolderList = accountHolderService.getAllAccountHolder();
+		return new ModelAndView("accountHolder", "accountHolders", accountHolderList);
 	}
 	
 	public void setAccountHolderService(IAccountHolderService ahc) {

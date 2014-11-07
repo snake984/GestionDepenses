@@ -31,8 +31,8 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="/">Accueil</a></li>
-              <li><a href="/gestiondepenses/accountHolder">Utilisateurs</a></li>
-              <li><a href="/gestiondepenses/budget">Prévision de budget</a></li>
+              <li><a href="/gestiondepenses/accountHolders">Gestion des utilisateurs </a></li>
+              <li><a href="/gestiondepenses/budget">Gestion des dépenses</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -42,7 +42,7 @@
 <div class="container">
 
 	<h1>
-		Wesh Reda , bien ou bien ?  
+		Bienvenue dans l'application WEB de gestion de dépenses.  
 	</h1>
 	<P>  The time on the server is ${serverTime}. </P>
 </div>

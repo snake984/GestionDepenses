@@ -9,4 +9,8 @@
 	<bean id="accountHolderService" class="com.esiea.gestiondepenses.service.impl.AccountHolderServiceImpl">
 	    <property name="accountHolderDao" ref="accountHolderDao" /> <!-- ref de la propriété du service = id du fichier de context (ici dao-context) -->
 	</bean>
+	
+	<bean id="accountService" class="com.esiea.gestiondepenses.service.impl.AccountServiceImpl">
+	    <property name="accountDao" ref="accountDao" /> <!-- ref de la propriété du service = id du fichier de context (ici dao-context) -->
+	</bean>
 </beans>

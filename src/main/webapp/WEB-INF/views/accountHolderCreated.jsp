@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Prévision de budget</title>
+<title>Mon compte</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Home Page">
     <meta name="author" content="snake984">
@@ -17,11 +17,11 @@
   padding-top: 50px;
   }
 	</style>
-	
+	<title>Contact Manager</title>
 </head>
 
 <body>
-
+    
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -43,7 +43,11 @@
     </div>
 
 	<div class="container">
-		<p>Bienvenue dans prévision de budget</p>
+	
+		<!-- <p>Liste des utilisateurs : </p> -->
+		<!-- account userName : account.getName() -->
+	The account holder with name <strong>${accountHolderModel.accountHolderUsername} ${accountHolderModel.accountHolderLastname}</strong> has been created.
+	 
 	</div>
 	
 	    <!-- Le javascript

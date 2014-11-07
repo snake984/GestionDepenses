@@ -37,7 +37,7 @@
 				<td><form:input path="accountHolderZipCode" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Add Contact" /></td>
+				<td colspan="2"><input type="submit" value="Add account holder" /></td>
 			</tr>
 		</table>
 	</form:form>

@@ -8,5 +8,5 @@ public interface IAccountHolderService {
     
 	public void createAccountHolder(AccountHolder accountHolder);
 	public List<AccountHolder> getAllAccountHolder();
-	
+	public AccountHolder getAccountHolderById(int id);
 }

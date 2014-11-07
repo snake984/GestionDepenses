@@ -11,6 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+
 /**
  * @author Mourad
  *
@@ -25,15 +28,21 @@ public class Account {
 	@Column(name="ACC_ID", nullable = false) // Première colonne dans la BDD.
 	private int accountId;
 	
+	@NotEmpty(message="(*) Mandatory field")
 	@Column(name="ACC_LABEL", nullable = false)// nullable = false = champs obligatoire !
 	private String accountLabel;
 	
+	@Column(name="ACC_INITIAL_BUDGET")
+	private long initialBudget;
+
 	@Column(name="ACC_CREATION_DATE", nullable = false)
 	private Date accountCreationDate;
 	
 	@ManyToOne
 	@JoinColumn(name="ACCOUNT_HOLDER_ID")
 	private AccountHolder accountHolder;
+	
+	public Account() {}
 	
 	public AccountHolder getAccountHolder() {
 		return accountHolder;
@@ -66,10 +75,14 @@ public class Account {
 	public void setAccountCreationDate(Date accountCreationDate) {
 		this.accountCreationDate = accountCreationDate;
 	}
-
-	public Account() {}
-
 	
+	public long getInitialBudget() {
+		return initialBudget;
+	}
+
+	public void setInitialBudget(long initialBudget) {
+		this.initialBudget = initialBudget;
+	}
 	
 	
 	

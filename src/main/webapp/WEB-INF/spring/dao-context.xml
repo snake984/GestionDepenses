@@ -10,4 +10,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     
     <bean id="accountHolderDao" class="com.esiea.gestiondepenses.dao.impl.AccountHolderDAOImpl" parent="genericDao"/>
     
+    <bean id="accountDao" class="com.esiea.gestiondepenses.dao.impl.AccountDAOImpl" parent="genericDao"/>
+    
 </beans>

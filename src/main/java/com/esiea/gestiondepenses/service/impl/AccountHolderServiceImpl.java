@@ -20,13 +20,17 @@ public class AccountHolderServiceImpl implements IAccountHolderService {
 
 	@Override
 	public List<AccountHolder> getAllAccountHolder() {
-		// TODO Auto-generated method stub
-		return null;
+		return accountHolderDao.getAllAccountHolders();
 	}
 	
 	//Le set permet d'affecter ahd crée par Spring au préalable à la variable de classe accountHolderDao.
 	public void setAccountHolderDao(IAccountHolderDAO ahd) {
 		this.accountHolderDao = ahd;
+	}
+
+	@Override
+	public AccountHolder getAccountHolderById(int id) {
+		return accountHolderDao.find(id);
 	}
 
 }
