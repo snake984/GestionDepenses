@@ -45,8 +45,23 @@
 	<div class="container">
 		<p>Bienvenue dans prévision de budget</p>
 	</div>
-	
-	    <!-- Le javascript
+
+	<p>Liste des comptes :</p>
+
+	<table border="1">
+		<tr>
+			<th>Label</th>
+			<th>Budget</th>
+		</tr>
+		<c:forEach var="account" items="${Account}">
+			<tr>
+				<td><c:out value="${account.accountLabel}" /></td>
+				<td><c:out value="${account.initialBudget}" /></td>
+			</tr>
+		</c:forEach>
+	</table>
+
+	<!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

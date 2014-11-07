@@ -1,6 +1,7 @@
 package com.esiea.gestiondepenses.controller;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -42,6 +43,16 @@ public class AccountController {
 			return new ModelAndView("accountCreated", "accountModel", account);
 		}
 	}
+	
+	//Récupération de tous les comptes.
+	@RequestMapping(value = "/budget", 
+	method=RequestMethod.GET)
+		public ModelAndView createAccountBud() {
+			List<Account> accountList = accountService.getAllAccount();
+			ModelAndView model = new ModelAndView("budget");
+			model.addObject("Account", accountList);
+			return model;
+		}
 	
 	public void setAccountHolderService(IAccountHolderService ahs) {
 		this.accountHolderService = ahs;

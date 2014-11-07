@@ -1,5 +1,7 @@
 package com.esiea.gestiondepenses.service.impl;
 
+import java.util.List;
+
 import org.springframework.transaction.annotation.Transactional;
 
 import com.esiea.gestiondepenses.dao.IAccountDAO;
@@ -18,6 +20,11 @@ public class AccountServiceImpl implements IAccountService {
 	
 	public void setAccountDao(IAccountDAO ad) {
 		this.accountDao = ad;
+	}
+
+	@Override
+	public List<Account> getAllAccount() {
+		return accountDao.getAllAccount();
 	}
 
 }
